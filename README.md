@@ -23,11 +23,13 @@ The first step is to import cv2
 OpenCV comes with pre-trained classifiers for faces, eyes, smiles and so forth. These pre-trained classifiers are XML files stored in [here](https://github.com/opencv/opencv/tree/master/data/haarcascades) and need to be cloned to your computer (step 2) and then declared the cascade classifiers.
 
 ***3.Face detection***
+
 For performing the face detection on images we need to process the image by gray scaling it and apply the classifier. Once doing these the output will look like 
 
 <div align=center><img width="350" src="./images/facedetect.png"/></div>
 
 ***4. Real time face-detection***
+
 The first step towards reading a video file is to create a VideoCapture object and then VideoWrite defining the 4-character code of codec used to compress the frames.
 For real-time face-detection we will use the same procedure as face-detection on images but this time adding the cascade classifiers for eyes and smile in a for loop.
 We will expect to see the following result: 
